@@ -2,4 +2,10 @@ from django.urls import path
 
 from . import views
 
-urlpatterns = [path("", views.index)]
+app_name = "core"
+
+urlpatterns = [
+    path("", views.index, name="index"),
+    path("<int:pk>/", views.detail, name="detail"),
+    path("add/", views.add, name="add"),
+]

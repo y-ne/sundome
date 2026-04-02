@@ -1,0 +1,15 @@
+<h1>Add KeyVal</h1>
+<form method="post">
+    {% csrf_token %} {% if error_message %}
+    <p><strong>{{ error_message }}</strong></p>
+    {% endif %}
+    <p>
+        <label for="key">Key:</label>
+        <input type="text" name="key" id="key" />
+    </p>
+    <p>
+        <label for="value">Value:</label>
+        <textarea name="value" id="value"></textarea>
+    </p>
+    <input type="submit" value="Save" />
+</form>

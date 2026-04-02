@@ -2,9 +2,13 @@
 {% if items %}
 <ul>
     {% for item in items %}
-    <li>{{ item.key }} = {{ item.value }}</li>
+    <li>
+        <a href="{% url 'core:detail' item.id %}">{{ item.key }}</a> = {{
+        item.value }}
+    </li>
     {% endfor %}
 </ul>
 {% else %}
 <p>No items yet.</p>
 {% endif %}
+<a href="{% url 'core:add' %}">Add new</a>
