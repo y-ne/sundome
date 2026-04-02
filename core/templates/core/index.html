@@ -1,0 +1,10 @@
+<h1>KeyVal Store</h1>
+{% if items %}
+<ul>
+    {% for item in items %}
+    <li>{{ item.key }} = {{ item.value }}</li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No items yet.</p>
+{% endif %}
