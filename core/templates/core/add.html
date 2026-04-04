@@ -1,7 +1,7 @@
 <h1>Add KeyVal</h1>
 <form method="post">
-    {% csrf_token %} {% if error_message %}
-    <p><strong>{{ error_message }}</strong></p>
+    {% csrf_token %} {% if err_msg %}
+    <p><strong>{{ err_msg }}</strong></p>
     {% endif %}
     <p>
         <label for="key">Key:</label>
